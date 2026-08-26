@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Octavise - ad spend into patient revenue</title>
+    <meta
+      name="description"
+      content="Octavise helps healthcare practice owners connect ad spend to bookings, patients, and revenue."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="Octavise home">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" />
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(45 50 50)" />
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(90 50 50)" />
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(135 50 50)" />
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(180 50 50)" />
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(225 50 50)" />
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(270 50 50)" />
+              <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(315 50 50)" />
+              <circle cx="50" cy="50" r="6" />
+            </svg>
+          </span>
+          <span>Octavise</span>
+        </a>
+        <div class="nav-links">
+          <a href="#dashboard">Dashboard</a>
+          <a href="#operators">For practices</a>
+          <a href="#security">Security</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav-actions">
+          <a href="/login">Log in</a>
+          <a class="button dark" href="#start">Founder offer</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero-split">
+        <div class="hero-copy-panel">
+          <a class="hero-proof" href="#dashboard">See how ad spend becomes patients <span>-></span></a>
+          <h1>Stop guessing where your ad spend is going</h1>
+          <p class="hero-text">
+            Connect Meta and Google Ads with your practice management data, then see
+            which campaigns become bookings, new patients, and revenue.
+          </p>
+          <div class="hero-actions" id="start">
+            <a class="button dark hero-primary" href="#start">Claim founder access</a>
+          </div>
+          <p class="fine-print">First 10 sign-ups can use FOUNDER30 at checkout.</p>
+        </div>
+
+        <div class="hero-app" aria-label="Octavise dashboard preview">
+          <div class="app-shell">
+          <aside class="sidebar">
+            <div class="workspace">
+              <span></span>
+              <div>
+                <strong>Harbour Health</strong>
+                <small>4 locations connected</small>
+              </div>
+            </div>
+            <nav>
+              <a class="active" href="#">Ad impact</a>
+              <a href="#">Practice overview</a>
+              <a href="#">Bookings</a>
+              <a href="#">Patients</a>
+              <a href="#">Revenue</a>
+              <a href="#">Referrals</a>
+              <a href="#">Insights</a>
+            </nav>
+            <div class="connected">
+              <small>Connected systems</small>
+              <span>Nookal</span>
+              <span>Meta Ads</span>
+              <span>Google Ads</span>
+            </div>
+          </aside>
+
+          <section class="workspace-main">
+            <div class="app-bar">
+              <div>
+                <small>Ad impact dashboard</small>
+                <h2>Which ads turned into patients?</h2>
+              </div>
+              <div class="filters">
+                <button>Last 30 days</button>
+                <button>All locations</button>
+              </div>
+            </div>
+
+            <div class="impact-layout">
+              <article class="summary-card main-metric">
+                <span>Estimated revenue from new patients</span>
+                <strong>$42,860</strong>
+                <p>Revenue rose while Meta pixel conversions fell.</p>
+              </article>
+              <article class="summary-card">
+                <span>Ad spend</span>
+                <strong>$4,820</strong>
+                <p>Meta and Google combined</p>
+              </article>
+              <article class="summary-card">
+                <span>New patients</span>
+                <strong>68</strong>
+                <p>41 during ad-active periods</p>
+              </article>
+              <article class="summary-card">
+                <span>Cost per patient</span>
+                <strong>$118</strong>
+                <p>12% lower than last month</p>
+              </article>
+            </div>
+
+            <div class="product-grid">
+              <article class="panel chart-panel">
+                <div class="panel-header">
+                  <div>
+                    <small>Spend, bookings, and patients</small>
+                    <strong>Campaign movement</strong>
+                  </div>
+                  <span>Correlation view</span>
+                </div>
+                <div class="combo-chart" aria-hidden="true">
+                  <div class="bars">
+                    <i style="--h: 42%"></i>
+                    <i style="--h: 55%"></i>
+                    <i style="--h: 39%"></i>
+                    <i style="--h: 72%"></i>
+                    <i style="--h: 64%"></i>
+                    <i style="--h: 84%"></i>
+                    <i style="--h: 78%"></i>
+                    <i style="--h: 92%"></i>
+                  </div>
+                  <svg viewBox="0 0 640 210" preserveAspectRatio="none">
+                    <path d="M0 166 C84 148 92 172 158 116 S266 82 318 104 410 172 484 108 574 54 640 76" />
+                    <path d="M0 185 C84 184 126 152 178 158 S260 112 330 126 438 122 500 86 584 108 640 58" class="blue-line" />
+                  </svg>
+                </div>
+              </article>
+
+              <article class="panel insight-panel">
+                <small>Octavise insight</small>
+                <p>
+                  Google Search created fewer bookings than Meta, but those patients
+                  generated 2.1x more revenue in their first appointment window.
+                </p>
+                <button>View source comparison</button>
+              </article>
+
+              <article class="panel campaign-table">
+                <div class="panel-header compact">
+                  <strong>Campaigns</strong>
+                  <span>Patient outcome view</span>
+                </div>
+                <div class="table-row labels">
+                  <span>Campaign</span><span>Spend</span><span>Patients</span><span>Revenue</span>
+                </div>
+                <div class="table-row">
+                  <strong>Google - physio near me</strong><span>$1,420</span><span>24</span><span>$18.4k</span>
+                </div>
+                <div class="table-row">
+                  <strong>Meta - back pain offer</strong><span>$1,890</span><span>17</span><span>$9.8k</span>
+                </div>
+                <div class="table-row">
+                  <strong>Brand search</strong><span>$610</span><span>11</span><span>$7.2k</span>
+                </div>
+              </article>
+            </div>
+          </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="system-strip">
+        <div class="container strip-track">
+          <span>Nookal</span>
+          <span>Cliniko</span>
+          <span>Meta Ads</span>
+          <span>Google Ads</span>
+          <span>Practice revenue</span>
+          <span>Patient movement</span>
+        </div>
+      </section>
+
+      <section class="section container why-section" id="dashboard">
+        <div class="why-kicker">Why Octavise?</div>
+        <div class="why-headline">
+          <h2>Grow your practice, not your reporting workload</h2>
+          <p>
+            Smaller health practices can burn thousands of dollars a month before
+            the reports make sense. Octavise connects ad activity to real practice
+            outcomes, so owners can focus on growth instead of reconciling spreadsheets.
+          </p>
+        </div>
+
+        <div class="why-card-grid">
+          <article class="why-card">
+            <div class="why-visual soft-photo">
+              <div class="icon-cluster" aria-hidden="true">
+                <span>↗</span>
+                <span>$</span>
+                <span>◷</span>
+                <span>＋</span>
+                <span>◎</span>
+                <span>⌁</span>
+              </div>
+            </div>
+            <h3>One product for practice growth signals</h3>
+            <p>
+              Ad spend, bookings, new patients, revenue, referrals, and practice
+              movement in one operating view.
+            </p>
+          </article>
+          <article class="why-card">
+            <div class="why-visual chat-visual">
+              <div class="chat-window">
+                <div class="chat-title"># ad-impact</div>
+                <div class="chat-row">
+                  <span class="avatar"></span>
+                  <p><strong>Octavise</strong> Google Search drove fewer leads, but higher first-month revenue.</p>
+                </div>
+                <div class="chat-row muted-row">
+                  <span class="avatar blue"></span>
+                  <p><strong>Owner</strong> Increase search before scaling Meta tests.</p>
+                </div>
+              </div>
+            </div>
+            <h3>Works where decisions already happen</h3>
+            <p>
+              Turn performance reports into plain-English next steps for owners,
+              managers, and marketing partners.
+            </p>
+          </article>
+          <article class="why-card">
+            <div class="why-visual outcome-visual">
+              <div class="outcome-panel">
+                <div class="outcome-row">
+                  <span>Meta Ads</span>
+                  <strong>17 patients</strong>
+                  <em>$9.8k revenue</em>
+                </div>
+                <div class="outcome-row">
+                  <span>Google Ads</span>
+                  <strong>24 patients</strong>
+                  <em>$18.4k revenue</em>
+                </div>
+                <div class="outcome-row">
+                  <span>Referrals</span>
+                  <strong>31 patients</strong>
+                  <em>$22.1k revenue</em>
+                </div>
+              </div>
+            </div>
+            <h3>Patient outcomes, no campaign guesswork</h3>
+            <p>
+              Compare channels by the patients and revenue they create, not only
+              the conversions an ad platform reports.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="agent-section">
+        <div class="container agent-layout">
+          <div class="agent-copy">
+            <div class="feature-kicker">Practice intelligence</div>
+            <h2>Set it up once. Know what is working.</h2>
+            <p>
+              Connect your practice and ad systems once, then let Octavise keep
+              the reporting work moving automatically.
+            </p>
+            <div class="agent-list">
+              <article>
+                <div class="agent-icon">↗</div>
+                <div>
+                  <h3>Ad-to-patient workflow</h3>
+                  <p>Campaign spend, bookings, new patients, and revenue stay connected without spreadsheet exports.</p>
+                </div>
+              </article>
+              <article>
+                <div class="agent-icon">$</div>
+                <div>
+                  <h3>Revenue handoff</h3>
+                  <p>Practice revenue and appointment outcomes are packaged into owner-ready performance views.</p>
+                </div>
+              </article>
+              <article>
+                <div class="agent-icon">◎</div>
+                <div>
+                  <h3>Owner assistant</h3>
+                  <p>Plain-English insights explain what changed, which channels moved, and where to focus next.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="agent-visual" aria-label="Octavise workflow preview">
+            <div class="agent-prompt">
+              <span>Build a monthly ad impact report for Harbour Health</span>
+              <button aria-label="Run report">↑</button>
+            </div>
+            <div class="workflow-card">
+              <h3>Ad impact plan</h3>
+              <div class="workflow-step active">
+                <span>◌</span>
+                <div>
+                  <strong>Pull ad spend</strong>
+                  <p>Meta and Google Ads synced for the month</p>
+                </div>
+                <em>›</em>
+              </div>
+              <div class="workflow-step">
+                <span>☷</span>
+                <div>
+                  <strong>Match practice movement</strong>
+                  <p>Bookings, new patients, revenue, and cancellations compared</p>
+                </div>
+                <em>›</em>
+              </div>
+              <div class="workflow-step">
+                <span>◷</span>
+                <div>
+                  <strong>Prepare owner summary</strong>
+                  <p>Channel quality and budget signals ready for review</p>
+                </div>
+                <em>›</em>
+              </div>
+              <div class="workflow-step disabled">
+                <span>☆</span>
+                <div>
+                  <strong>Recommend next action</strong>
+                  <p>Scale, pause, or investigate campaigns</p>
+                </div>
+                <em>›</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-grid-section">
+        <div class="container feature-intro">
+          <div class="feature-kicker">Operating view</div>
+          <h2>From scattered reports to clinic decisions</h2>
+          <p>
+            Revenue, bookings, patient movement, referrals, and ad activity come
+            together in one dashboard. Your team never has to chase the numbers.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <div class="feature-icon">↗</div>
+            <h3>Ad impact</h3>
+            <p>Compare campaign spend with booking volume, new patients, and revenue movement.</p>
+          </article>
+          <article>
+            <div class="feature-icon">$</div>
+            <h3>Revenue tracking</h3>
+            <p>See whether marketing activity is showing up in real practice revenue.</p>
+          </article>
+          <article>
+            <div class="feature-icon">◷</div>
+            <h3>Bookings</h3>
+            <p>Understand demand, cancellations, no-shows, and appointment trends by period.</p>
+          </article>
+          <article>
+            <div class="feature-icon">◎</div>
+            <h3>Patient movement</h3>
+            <p>Separate new and returning patient trends without turning reports into records.</p>
+          </article>
+          <article>
+            <div class="feature-icon">⌁</div>
+            <h3>Referral sources</h3>
+            <p>Compare Google, Meta, referrals, and direct channels by the outcomes they create.</p>
+          </article>
+          <article>
+            <div class="feature-icon">▥</div>
+            <h3>Owner insights</h3>
+            <p>Get plain-English context that helps connect campaign activity to clinic growth.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container operators" id="operators">
+        <div class="section-label">Different users. Same picture.</div>
+        <h2>Everyone can finally work from the same numbers.</h2>
+        <div class="operator-grid">
+          <article>
+            <span>Owners</span>
+            <h3>Know what is growing the practice.</h3>
+            <p>Understand whether budget is creating patients, revenue, and capacity pressure.</p>
+          </article>
+          <article>
+            <span>Practice managers</span>
+            <h3>Connect demand to operations.</h3>
+            <p>See bookings, cancellations, practitioner availability, and location trends in context.</p>
+          </article>
+          <article>
+            <span>Agencies</span>
+            <h3>Prove impact beyond the pixel.</h3>
+            <p>Show how campaigns relate to patient outcomes without claiming impossible attribution.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="security-section" id="security">
+        <div class="container security-grid">
+          <div>
+            <div class="section-label inverted">Healthcare data</div>
+            <h2>Useful reporting without turning your dashboard into a patient record system.</h2>
+            <p>
+              Octavise is built around aggregated dashboard snapshots and read-only
+              connections, so owners can make decisions without exposing more data than
+              the report needs.
+            </p>
+          </div>
+          <div class="security-list">
+            <article>No raw patient data stored in dashboard snapshots</article>
+            <article>Read-only access to practice and ad platforms</article>
+            <article>Aggregated counts, totals, revenue, and trends</article>
+            <article>Login-protected views for each practice</article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container integrations">
+        <div class="section-label">Integrations</div>
+        <div class="two-col">
+          <h2>Connect the systems your practice already uses.</h2>
+          <p>
+            Octavise sits between practice management and advertising platforms,
+            removing the manual reconciliation work that makes performance reporting
+            slow and unreliable.
+          </p>
+        </div>
+        <div class="integration-flow">
+          <div class="flow-column">
+            <span>Nookal</span>
+            <span>Cliniko</span>
+          </div>
+          <div class="flow-center">Octavise</div>
+          <div class="flow-column">
+            <span>Meta Ads</span>
+            <span>Google Ads</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section math">
+        <div class="container">
+          <div class="section-label">The math behind the product</div>
+          <h2>Make every ad dollar easier to defend.</h2>
+          <div class="math-grid">
+            <article><strong>$4,820</strong><span>monthly ad spend in view</span></article>
+            <article><strong>68</strong><span>new patients this month</span></article>
+            <article><strong>$118</strong><span>estimated cost per new patient</span></article>
+            <article><strong>2.1x</strong><span>higher revenue from one channel</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container offer">
+        <div class="offer-card">
+          <div>
+            <div class="section-label">Founder offer</div>
+            <h2>Early access for the first 10 healthcare practices.</h2>
+            <p>Use FOUNDER30 at checkout while founder spots are available.</p>
+          </div>
+          <a class="button blue" href="#start">Claim founder access</a>
+        </div>
+      </section>
+
+      <section class="section container faq" id="faq">
+        <div class="section-label">FAQ</div>
+        <h2>Questions before you connect.</h2>
+        <div class="faq-list">
+          <details open>
+            <summary>How is Octavise different from Meta or Google Ads reporting?</summary>
+            <p>Meta and Google show ad-platform activity. Octavise adds practice context: bookings, new patients, revenue, cancellations, referrals, and operating trends.</p>
+          </details>
+          <details>
+            <summary>Which systems does Octavise connect to?</summary>
+            <p>Octavise currently supports Nookal and Cliniko for practice management, plus Meta Ads and Google Ads for advertising data.</p>
+          </details>
+          <details>
+            <summary>Is this exact patient-level attribution?</summary>
+            <p>No. Octavise is designed to show practical performance context and correlation, not overclaim deterministic patient-level attribution.</p>
+          </details>
+          <details>
+            <summary>Does Octavise modify campaigns or practice records?</summary>
+            <p>No. The dashboard uses read-only access and does not change appointments, patient records, or ad campaigns.</p>
+          </details>
+          <details>
+            <summary>What does the founder offer include?</summary>
+            <p>The offer gives early practices 30% off with the code FOUNDER30 while the first 10 founder spots are available.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-layout">
+        <div>
+          <h2>See which ads become patients.</h2>
+          <p>Connect ad spend to real practice outcomes with Octavise.</p>
+        </div>
+        <a class="button cream" href="#start">Get early access</a>
+      </div>
+    </footer>
+  </body>
+</html>
