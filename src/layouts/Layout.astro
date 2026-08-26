@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Octavise - ad spend into patient revenue",
+  description = "Octavise helps healthcare practice owners connect ad spend to bookings, patients, and revenue."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="Octavise home">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <g fill="currentColor">
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" />
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(45 50 50)" />
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(90 50 50)" />
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(135 50 50)" />
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(180 50 50)" />
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(225 50 50)" />
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(270 50 50)" />
+                <path d="M46 53C47 40 46 22 61 11c4-3 9 0 8 5-3 14-11 24-15 34-2.5 6-6.5 6-8 3Z" transform="rotate(315 50 50)" />
+              </g>
+              <circle cx="50" cy="50" r="8" fill="#0f172a" />
+            </svg>
+          </span>
+          <span>Octavise</span>
+        </a>
+        <div class="nav-links">
+          <a href="#dashboard">Dashboard</a>
+          <a href="#operators">For practices</a>
+          <a href="#security">Security</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav-actions">
+          <a href="/login">Log in</a>
+          <a class="button dark" href="#start">Claim founding offer</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>
