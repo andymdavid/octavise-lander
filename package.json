@@ -1,0 +1,32 @@
+{
+  "name": "octavise-landing",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "dev:payload": "tsx server.ts",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@payloadcms/richtext-slate": "^1.5.2",
+    "astro": "^7.2.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "payload": "^2.3.0"
+  },
+  "allowScripts": {
+    "esbuild": true
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.3.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
