@@ -69,6 +69,51 @@ nvm use 22
 nvm install 22 && nvm use 22
 ```
 
+## Payload CMS (Admin + REST API)
+
+Content is managed via [Payload CMS v2](https://payloadcms.com/docs/local-api/overview) running as a standalone Express server, backed by a local MongoDB instance. This is intentionally **not** Payload v3/Next.js — Payload v2's Admin Panel, REST, and GraphQL APIs run entirely on Express, which is what allows this to pair with an Astro frontend instead of Next.js.
+
+### One-time setup
+
+```bash
+# 1. Install and start MongoDB locally via Homebrew
+brew tap mongodb/brew
+brew install mongodb-community@7.0
+brew services start mongodb/brew/mongodb-community@7.0
+
+# 2. Copy the env template and fill in a secret
+cp .env.example .env
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+# paste the output into PAYLOAD_SECRET in .env
+```
+
+### Running the Payload server
+
+```bash
+npm run dev:payload
+```
+
+This starts Express + Payload on `http://localhost:3001`:
+
+- Admin Panel: `http://localhost:3001/admin` (first visit prompts you to create an admin user)
+- REST API: `http://localhost:3001/api/<collection-slug>` (e.g. `/api/features`, `/api/hero`)
+- GraphQL: `http://localhost:3001/api/graphql`
+
+By default, Payload v2 requires an authenticated user for all collection operations (including reads) unless a collection explicitly overrides its `access` config. To let the Astro frontend fetch content without auth, add `access: { read: () => true }` to the relevant collections/globals in `payload.config.ts`.
+
+**Note:** `dev:payload` sets `NODE_OPTIONS=--require ./scripts/stub-styles.cjs`. This is required because Payload v2's compiled admin bundle contains `require('./foo.scss')` calls meant for a webpack build step; the stub prevents plain Node from choking on those files when booting the server. See `scripts/stub-styles.cjs` for details. The command also clears Payload's generated Vite dependency cache before startup because the v2 Vite adapter embeds `payload.config.ts` in its optimized admin root and can otherwise continue serving stale config code after a restart.
+
+### Running Astro + Payload together
+
+Run both dev servers in separate terminals:
+
+```bash
+npm run dev           # Astro frontend on :4321
+npm run dev:payload   # Payload admin/API on :3001
+```
+
+Astro pages/components fetch data from Payload via `fetch('http://localhost:3001/api/...')` (or the deployed Payload URL in production via `PAYLOAD_PUBLIC_SERVER_URL`).
+
 ## Design Direction
 
 The page is intentionally structured around the **Taito.ai reference system**:
@@ -120,7 +165,7 @@ Astro provides significant performance improvements over traditional SPA framewo
 
 ### Potential Additions
 
-- Payload CMS integration for content management
+- Wire Astro pages to fetch content from the Payload REST API instead of hardcoded copy
 - A/B testing setup for headline/CTA variants
 - Customer testimonials and logos (when available)
 - Additional product screenshots

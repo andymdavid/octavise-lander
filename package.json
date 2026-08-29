@@ -7,23 +7,26 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "dev:payload": "tsx server.ts",
+    "dev:payload": "node scripts/clear-payload-vite-cache.cjs && NODE_OPTIONS=\"--require ./scripts/stub-styles.cjs\" tsx server.ts",
+    "generate:types": "NODE_OPTIONS=\"--require ./scripts/stub-styles.cjs\" payload generate:types",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@payloadcms/bundler-vite": "^0.1.9",
+    "@payloadcms/db-mongodb": "^1.7.5",
     "@payloadcms/richtext-slate": "^1.5.2",
     "astro": "^7.2.6",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "payload": "^2.3.0"
+    "express": "^4.21.2",
+    "payload": "^2.32.3"
   },
   "allowScripts": {
     "esbuild": true
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
+    "@types/express": "^4.17.25",
     "@types/node": "^26.3.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.12",
